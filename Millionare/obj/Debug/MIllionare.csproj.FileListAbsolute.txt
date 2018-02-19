@@ -28,3 +28,11 @@ C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\Auditorium.baml
 C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\Auditorium.g.cs
 C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\App.baml
 C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\Dictionary1.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\MIllionare\MIllionare\obj\Debug\Auditorium.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\MIllionare\MIllionare\obj\Debug\Dictionary1.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\MIllionare\MIllionare\obj\Debug\App.baml
+C:\Users\User\Documents\Visual Studio 2013\Projects\MIllionare\MIllionare\obj\Debug\Auditorium.g.cs
+C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\WindowCall.baml
+C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\WindowCall.g.cs
+C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\LostWindow.baml
+C:\Users\Admin\Desktop\Millionare\MIllionare\obj\Debug\LostWindow.g.cs

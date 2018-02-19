@@ -1,0 +1,23 @@
+﻿<Window x:Class="MIllionare.LostWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LostWindow" Height="272" Width="300" WindowStartupLocation="CenterOwner" Icon="images.jpg">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#313335" Offset="0.1"></GradientStop>
+            <GradientStop Color="Black" Offset="1"></GradientStop>
+
+        </RadialGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <TextBlock FontSize="20" Name="text" HorizontalAlignment="Left" TextAlignment="Center" Margin="14,55,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="81" Width="262" Foreground="White"/>
+        <Button Style="{StaticResource  AnswerButtonStyle}" IsDefault="True" HorizontalAlignment="Left" Margin="36,170,0,0" VerticalAlignment="Top" Width="95"  Height="32" Click="Yes_Click">
+            <TextBlock HorizontalAlignment="Left" Margin="36,5,0,0" TextWrapping="Wrap" Text="Да" VerticalAlignment="Top"/>
+        </Button>
+        <Button Style="{StaticResource  AnswerButtonStyle}" IsCancel="True" HorizontalAlignment="Left" Margin="159,170,0,0" VerticalAlignment="Top" Width="95"  Height="32" Click="No_Click">
+            <TextBlock HorizontalAlignment="Left" Margin="34,5,0,0" TextWrapping="Wrap" Text="Нет" VerticalAlignment="Top"/>
+        </Button>
+
+    </Grid>
+</Window>

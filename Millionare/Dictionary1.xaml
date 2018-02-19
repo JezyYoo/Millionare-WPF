@@ -40,4 +40,66 @@
         </Setter>
     </Style>
 
+    
+    <ControlTemplate TargetType="Button" x:Key="btn50">
+        <Border CornerRadius="18" Name="border" BorderBrush="LightBlue" BorderThickness="1.5">
+
+            <Image Source="2.png"></Image>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="Orange"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False" >
+                <Setter Property="Background" TargetName="border" Value="Red"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Button" x:Key="auditorium">
+        <Border CornerRadius="18" Name="border" BorderBrush="LightBlue" BorderThickness="1.5">
+
+            <Image Source="1.png"></Image>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="Orange"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False" >
+                <Setter Property="Background" TargetName="border" Value="Red"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Button" x:Key="call">
+        <Border CornerRadius="18" Name="border" BorderBrush="LightBlue" BorderThickness="1.5">
+
+            <Image Source="3.png"></Image>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="Orange"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False" >
+                <Setter Property="Background" TargetName="border" Value="Red"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Button" x:Key="trueOne">
+        <Border CornerRadius="18" Name="border" BorderBrush="LightBlue" BorderThickness="1.5">
+
+            <Image Source="4.png"></Image>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="Orange"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False" >
+                <Setter Property="Background" TargetName="border" Value="Red"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    
 </ResourceDictionary>

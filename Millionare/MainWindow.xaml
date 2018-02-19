@@ -55,18 +55,15 @@
                     <TextBlock x:Name="Question_block" HorizontalAlignment="Center" VerticalAlignment="Center" Width="366" Height="41" FontSize="14" TextWrapping="Wrap" Margin="58,4,86,6" TextAlignment="Center">fgdfgg</TextBlock>
                     </Grid>
         	</InlineUIContainer></TextBlock>
-        <Button  x:Name="FiftyFifty" Background="Black" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="fiftyfifty_Click">
-            <Image Source="2.png"></Image>
+        <Button  Template="{StaticResource btn50}" x:Name="FiftyFifty" Background="Black" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="fiftyfifty_Click">
+            
         </Button>
-        <Button  x:Name="Zal" Background="Black" HorizontalAlignment="Left" Margin="127,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="Zal_Click">
-            <Image Source="1.png"/>
+        <Button Template="{StaticResource auditorium}" x:Name="Zal" Background="Black" HorizontalAlignment="Left" Margin="127,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="Zal_Click">
         </Button>
-        <Button x:Name="Call" Background="Black" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="Call_Click">
-            <Image Source="3.png"></Image>
+        <Button Template="{StaticResource call}" x:Name="Call" Background="Black" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="Call_Click">
 
         </Button>
-        <Button x:Name="TrueOne" Background="Black" HorizontalAlignment="Left" Margin="258,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="TrueOne_Click">
-            <Image Source="4.png"></Image>
+        <Button Template="{StaticResource trueOne}" x:Name="TrueOne" Background="Black" HorizontalAlignment="Left" Margin="258,10,0,0" VerticalAlignment="Top" Width="52" Height="40" Click="TrueOne_Click">
         </Button>
         <ListBox x:Name="ListBox"  Background="Black" HorizontalAlignment="Left" Height="277" Margin="346,10,0,0" VerticalAlignment="Top" Width="161" SelectedIndex="14" Opacity="0.75" BorderThickness="0" SelectionChanged="ListBox_SelectionChanged">
             <ListBoxItem Content="15    1 000 000" Height="18" Width="143" Foreground="White" BorderBrush="Orange" BorderThickness="0" FontWeight="Bold"/>

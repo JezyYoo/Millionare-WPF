@@ -164,15 +164,28 @@ namespace MIllionare
             }
             else
             {
-                curQuestionPos = 0;
-                FiftyFifty.IsEnabled = true;
-                Call.IsEnabled = true;
-                Zal.IsEnabled = true;
-                TrueOne.IsEnabled = true;
-                ListBox.SelectedIndex = 14;
-                MessageBox.Show("You lost",":(", MessageBoxButton.OK, MessageBoxImage.Information);
-                ShuffleQuestionList(questions);
-                NextQuestion();
+                LostWindow wnd_lost = new LostWindow();
+                wnd_lost.Owner = this;
+                ListBoxItem item = ListBox.SelectedItem as ListBoxItem;
+                string value = item.Content.ToString().Substring(5, item.Content.ToString().Length-5);
+                wnd_lost.text.Text = "Вы проигграли!\nСумма проигрыша " + value + "$\nЖелаете начать заново?";
+                wnd_lost.ShowDialog();
+                if(wnd_lost.DialogResult.Value && wnd_lost.DialogResult.HasValue)
+                {
+                    curQuestionPos = 0;
+                    FiftyFifty.IsEnabled = true;
+                    Call.IsEnabled = true;
+                    Zal.IsEnabled = true;
+                    TrueOne.IsEnabled = true;
+                    ShuffleQuestionList(questions);
+                    NextQuestion();
+                    ListBox.SelectedIndex = 14;
+                }
+                else
+                {
+                    Close();
+                }
+                
             }
         }
        
@@ -226,8 +239,17 @@ namespace MIllionare
                 Auditorium wnd = new Auditorium();
                 wnd.Owner = this;
                 int pos = 0;
-                int true_proc = rnd.Next(40, 60);
-                int proc1 = true_proc - 24, proc2 = true_proc - 32, proc3 = true_proc - 17;
+                double all_proc = 100;
+                double true_proc = rnd.Next(40, 60);
+                all_proc -= true_proc;
+                all_proc /= 2;
+                Math.Ceiling(all_proc);
+                double proc1 = all_proc;
+                int temp = rnd.Next(4, 8);
+                all_proc -= temp;
+                Math.Ceiling(all_proc);
+                double proc2 = all_proc;
+                int proc3 = temp;
                 for (int i = 0; i < 4; i++)
                 {
                     if (ans_text[i].Text == questions[curQuestionPos].true_answer)
@@ -326,7 +348,7 @@ namespace MIllionare
                     wnd.D_rect.Height = true_proc;
                     wnd.D_rect.Margin = new Thickness(wnd.D_rect.Margin.Left, wnd.D_rect.Margin.Top - temp_proc, wnd.D_rect.Margin.Right, wnd.D_rect.Margin.Bottom);
                 }
-                wnd.Show();             
+                wnd.ShowDialog();             
                 Zal.IsEnabled = false;
             }
         }
@@ -335,7 +357,12 @@ namespace MIllionare
         {
             if (Call.IsEnabled)
             {
+                WindowCall wnd_call = new WindowCall();
+                wnd_call.Owner = this;
                 int pos = 0;
+                int rand_pos = 0;
+                int pos_not_true = 0;
+                int probability = rnd.Next(0, 10);
                 for (int i = 0; i < 4; i++)
                 {
                     if (ans_text[i].Text == questions[curQuestionPos].true_answer)
@@ -344,7 +371,20 @@ namespace MIllionare
                         break;
                     }
                 }
-                MessageBox.Show("Ваш друг Колька считает, что ответ: " + ans_text[pos].Text, "Call", MessageBoxButton.OK, MessageBoxImage.Information);
+                if (probability >= 3)
+                {
+                    wnd_call.trueKolya.Text = "Ваш друг Колька считает, что ответ: " + ans_text[pos].Text;
+                }
+                else
+                {
+                    do
+                    {
+                        rand_pos = rnd.Next(0, 4);
+                    }
+                    while (rand_pos == pos);
+                    wnd_call.trueKolya.Text = "Ваш друг Колька считает, что ответ: " + ans_text[rand_pos].Text;
+                }
+                wnd_call.ShowDialog();
                 Call.IsEnabled = false;
             }
         }
